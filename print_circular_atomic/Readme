@@ -1,0 +1,6 @@
+print atomic
+
+1) print atomic uses atomic variable to check if its current threads turn to do its job.
+2) all threads run in infinite loop and print as per algo mentioned in problem statement.
+3) lock/wait based solution is also implemented.
+4) yields if not current threads schedule.

@@ -1,0 +1,19 @@
+Exchange Connector
+Exchange Connector has below modules
+1) Event Loop
+    This encapsulates the event processing thread, as multiple connections are expected epoll is used.
+    it runs a thread and waits on epoll.
+    Sessions are added to this Event loop for handling events on these sessions.
+2) Exchange Session:
+    Each session represents a socket connection made to exchange. As partial or multiple packets can be received 
+    a buffer is used to store session specific partial data.
+3) Sorted List:
+    Sorted list is basically a sorted array, where elements are always sorted. Choice of this data structure is made 
+    because all exchanges are sending sorted data so once exchange A sends integer next integer will be inserted at higher index. 
+    wont be immediate next because other exchanges are also sending data. With above assumption each session will store the last 
+    inserted index and search is done after that index only. Which will make it faster and less movements of data will be done.
+    This logic can be easily removed by changing one line code. Heap data structure is also suitable for this.
+
+4) As problem statement mentions only port number to be provided on command line assuming servers will run on localhost.
+5) Assuming same byte order on hosts.
+    

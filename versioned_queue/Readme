@@ -1,0 +1,4 @@
+version queue
+
+version queue is simple queue from which data will never be removed, enque and deque positions will decide the number of elements in the queue.
+for maintaining version numbers another array growable array is maintained whici will record the queue state at each modify operation on queue.
