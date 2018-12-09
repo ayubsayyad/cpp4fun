@@ -23,8 +23,10 @@ int solution(std::vector<int> nums, int numToadd){
     out.push_back(carry);
   }
 
+  
 
   std::for_each(out.rbegin(), out.rend(), [](int i){std::cout << i;});
+
 
 
 

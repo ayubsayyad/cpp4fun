@@ -20,9 +20,7 @@ int solution(std::vector<int> &A){
         auto diff = std::abs(rest - first);
         if(diff < mindiff){
             mindiff = diff;
-        }else{
-            break;
-        }
+        }    
     }
 
     return mindiff;
